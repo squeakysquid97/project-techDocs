@@ -22,7 +22,6 @@
     <h3>Documentation <input type="text" placeholder="Search 3.1 documentation"></h3>
   </header>
   <main>
-    <h3>Django at a glance</h3>
     <article>
       <aside>
         <p>
@@ -62,22 +61,32 @@
             <li>Django at a glance</li>
           </ul>
         </ul>
-        Getting help
-        FAQ
-        Try the FAQ — it's got answers to many common questions.
-        Index, Module Index, or Table of Contents
-        Handy when looking for specific information.
-        django-users mailing list
-        Search for information in the archives of the django-users mailing list, or post a question.
-        #django IRC channel
-        Ask a question in the #django IRC channel, or search the IRC logs to see if it’s been asked before.
-        Ticket tracker
-        Report bugs with Django or Django documentation in our ticket tracker.
-        Download:
-        Offline (Django 3.1): HTML | PDF | ePub
-        Provided by Read the Docs.
+        <p>Getting help</p>
+        <hr>
+        <p>FAQ</p>
+        <p>Try the FAQ — it's got answers to many common questions.</p>
+        <hr>
+        <p>Index, Module Index, or Table of Contents</p>
+        <p>Handy when looking for specific information.</p>
+        <hr>
+        <p>django-users mailing list</p>
+        <p>Search for information in the archives of the django-users mailing list, or post a question.</p>
+        <hr>
+        <p>#django IRC channel</p>
+        <p>Ask a question in the #django IRC channel, or search the IRC logs to see if it’s been asked before.</p>
+        <hr>
+        <p>Ticket tracker</p>
+        <p>Report bugs with Django or Django documentation in our ticket tracker.</p>
+        <hr>
+        <p>Download:</p>
+        <hr>
+        <p>Offline (Django 3.1): HTML | PDF | ePub</p>
+        <p>Provided by Read the Docs.</p>
         </p>
       </aside>
+    </article>
+    <article>
+      <h3>Django at a glance</h3>
       <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common
         Web-development
         tasks
@@ -90,6 +99,33 @@
         with
         the tutorial or dive right into more detailed documentation.
       </p>
+    </article>
+    <article>
+      <h4>Design your model</h4>
+      <p>Although you can use Django without a database, it comes with an object-relational mapper in which you describe
+        your
+        database layout in Python code.</p>
+      <p>The data-model syntax offers many rich ways of representing your models – so far, it’s been solving many years’
+        worth of
+        database-schema problems. Here’s a quick example:</p>
+      <code>
+        from django.db import models
+        
+        class Reporter(models.Model):
+        full_name = models.CharField(max_length=70)
+        
+        def __str__(self):
+        return self.full_name
+        
+        class Article(models.Model):
+        pub_date = models.DateField()
+        headline = models.CharField(max_length=200)
+        content = models.TextField()
+        reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+        
+        def __str__(self):
+        return self.headline
+      </code>
     </article>
   </main>
   <footer>
