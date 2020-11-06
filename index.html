@@ -101,35 +101,166 @@
       </p>
     </article>
     <article>
-      <h4>Design your model</h4>
+      <p><strong>Design your model</strong> </p>
       <p>Although you can use Django without a database, it comes with an object-relational mapper in which you describe
         your
         database layout in Python code.</p>
       <p>The data-model syntax offers many rich ways of representing your models – so far, it’s been solving many years’
         worth of
         database-schema problems. Here’s a quick example:</p>
-      <code>
-        from django.db import models
-        
-        class Reporter(models.Model):
-        full_name = models.CharField(max_length=70)
-        
-        def __str__(self):
-        return self.full_name
-        
-        class Article(models.Model):
-        pub_date = models.DateField()
-        headline = models.CharField(max_length=200)
-        content = models.TextField()
-        reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
-        
-        def __str__(self):
-        return self.headline
-      </code>
+      <pre><code>
+      from django.db import models
+      
+      class Reporter(models.Model):
+      full_name = models.CharField(max_length=70)
+      
+      def __str__(self):
+      return self.full_name
+      
+      class Article(models.Model):
+      
+      pub_date = models.DateField()
+      headline = models.CharField(max_length=200)
+      content = models.TextField()
+      reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+      
+      def __str__(self):
+      return self.headline
+      </code></pre>
     </article>
+    <hr>
+    <article>
+      <p><strong>Install it</strong> </p>
+      <p>Next, run the Django command-line utilities to create the database tables automatically:</p>
+      <pre> <code>
+      $ python manage.py makemigrations 
+      $ python manage.py migrate
+    </code>
+  </pre>
+      <p>The makemigrations command looks at all your available models and creates migrations for whichever tables don’t
+        already
+        exist. migrate runs the migrations and creates tables in your database, as well as optionally providing much
+        richer
+        schema control.</p>
+    </article>
+    <hr>
+    <article>
+      <p><strong>Enjoy the free API</strong></p>
+      <p>With that, you’ve got a free, and rich, Python API to access your data. The API is created on the fly, no code
+        generation necessary:</p>
+      <pre>
+      <code>
+      # Import the models we created from our "news" app
+      >>> from news.models import Article, Reporter
+
+      # No reporters are in the system yet.
+      >>> Reporter.objects.all()
+      &#60;QuerySet []&#62;
+
+      # Create a new Reporter.
+      >>> r = Reporter(full_name='John Smith')
+
+      # Save the object into the database. You have to call save() explicitly.
+      >>> r.save()
+
+      # Now it has an ID.
+      >>> r.id
+      1
+
+      # Now the new reporter is in the database.
+      >>> Reporter.objects.all()
+      &#60;QuerySet [&#60;Reporter: John Smith&#62;]
+
+      # Fields are represented as attributes on the Python object.
+      >>> r.full_name
+      'John Smith'
+
+      # Django provides a rich database lookup API.
+      >>> Reporter.objects.get(id=1)
+      &#60;Reporter: John Smith>
+      >>> Reporter.objects.get(full_name__startswith='John')
+      &#60;Reporter: John Smith>
+      >>> Reporter.objects.get(full_name__contains='mith')
+      &#60;Reporter: John Smith>
+      >>> Reporter.objects.get(id=2)
+      Traceback (most recent call last):
+        ...
+      DoesNotExist: Reporter matching query does not exist.
+
+      # Create an article.
+      >>> from datetime import date
+      >>> a = Article(pub_date=date.today(), headline='Django is cool',
+      ...     content='Yeah.', reporter=r)
+      >>> a.save()
+
+      # Now the article is in the database.
+      >>> Article.objects.all()
+      &#60;QuerySet [&#60;Article: Django is cool&#62;]
+
+      # Article objects get API access to related Reporter objects.
+      >>> r = a.reporter
+      >>> r.full_name
+      'John Smith'
+
+      # And vice versa: Reporter objects get API access to Article objects.
+      >>> r.article_set.all()
+      &#60;QuerySet [&#60;Article: Django is cool>]>
+
+      # The API follows relationships as far as you need, performing efficient
+      # JOINs for you behind the scenes.
+      # This finds all articles by a reporter whose name starts with "John".
+      >>> Article.objects.filter(reporter__full_name__startswith='John')
+      &#60;QuerySet [&#60;Article: Django is cool>]>
+
+      # Change an object by altering its attributes and calling save().
+      >>> r.full_name = 'Billy Goat'
+      >>> r.save()
+
+      # Delete an object with delete().
+      >>> r.delete()
+      </code>
+    </pre>
+    </article>
+    <hr>
   </main>
   <footer>
-
+    <nav>
+      Learn More |
+      <ul>
+        <li>About Django</li>
+        <li>Getting Started with Django</li>
+        <li>Team Organization</li>
+        <li>Django Software Foundation</li>
+        <li>Code of Conduct</li>
+        <li>Diversity Statement</li>
+      </ul>
+      Get Involved |
+      <ul>
+        <li>Join a Group</li>
+        <li>Contribute to Django</li>
+        <li>Submit a Bug</li>
+        <li>Report a Security Issue</li>
+      </ul>
+      Follow Us |
+      <ul>
+        <li>GitHub</li>
+        <li>Twitter</li>
+        <li>News RSS</li>
+        <li>Django Users Mailing List</li>
+      </ul>
+      Support Us |
+      <ul>
+        <li>Sponsor Django</li>
+        <li>Official merchandise store</li>
+        <li>Amazon Smile</li>
+        <li>Benevity Workplace Giving Program</li>
+      </ul>
+    </nav>
+    <nav>
+      <strong>django</strong> Hosting by <em>rackspace</em> Design by threespot. & andrevv<br>
+      © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the Django
+      Software Foundation.
+    </nav>
   </footer>
 </body>
 
