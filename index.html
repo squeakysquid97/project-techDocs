@@ -7,81 +7,79 @@
 
 <body>
   <header>
-    <p><strong>Django</strong> The web framework for perfectionists with deadlines.</p>
-    <nav>
-      OVERVIEW
-      DOWNLOAD
-      DOCUMENTATION
-      NEWS
-      COMMUNITY
-      CODE
-      ISSUES
-      ABOUT
-      ♥ DONATE
-    </nav>
-    <h3>Documentation <input type="text" placeholder="Search 3.1 documentation"></h3>
+    <h3>Django</strong> The web framework for perfectionists with deadlines.</p>
+      <nav>
+        <a href="#">OVERVIEW</a>
+        <a href="#">DOWNLOAD</a>
+        <a href="#">DOCUMENTATION</a>
+        <a href="#">NEWS</a>
+        <a href="#">COMMUNITY</a>
+        <a href="#">CODE</a>
+        <a href="#">ISSUES</a>
+        <a href="#">ABOUT</a>
+        <a href="#">♥ DONATE</a>
+      </nav>
+      <h3>Documentation <input type="text" placeholder="Search 3.1 documentation"></h3>
   </header>
   <main>
     <article>
       <aside>
         <p>
           Support Django!
-          <hr>
           FARM Digital donated to the Django Software Foundation to support Django development. Donate today!
-        <p>Contents</p>
-        <hr>
+        <h3>Contents</h3>
+
         <ul>
-          <li>Django at a glance</li>
+          <li><a href="#">Django at a glance</a></li>
           <ul>
-            <li>Design your model</li>
-            <li>Install it</li>
-            <li>Enjoy the free API</li>
-            <li>A dynamic admin interface: it’s not just scaffolding – it’s the whole house</li>
-            <li>Design your URLs</li>
-            <li>Write your views</li>
-            <li>Design your templates</li>
-            <li>This is just the surface</li>
+            <li><a href="#">Design your model</a></li>
+            <li><a href="#">Install it</a></li>
+            <li><a href="#">Enjoy the free API</a></li>
+            <li><a href="#">A dynamic admin interface: it’s not just scaffolding – it’s the whole house</a></li>
+            <li><a href="#">Design your URLs</a></li>
+            <li><a href="#">Write your views</a></li>
+            <li><a href="#">Design your templates</a></li>
+            <li><a href="#">This is just the surface</a></li>
           </ul>
         </ul>
-        <p>Browse</p>
-        <hr>
+        <h3>Browse</h3>
         <ul>
-          <li>Prev: Getting started</li>
-          <li>Next: Quick install guide</li>
-          <li>Table of contents</li>
-          <li>General Index</li>
-          <li>Python Module Index</li>
+          <li>Prev: <a href="#">Getting started</a></li>
+          <li>Next: <a href="#">Quick install guide</a></li>
+          <li><a href="#">Table of contents</a></li>
+          <li><a href="#">General Index</a></li>
+          <li><a href="#">Python Module Index</a></li>
         </ul>
-        <p>You are here:</p>
-        <hr>
+        <h3>You are here:</h3>
         <ul>
-          <li>Django 3.1 documentation</li>
+          <li><a href="#">Django 3.1 documentation</a></li>
           <ul>
-            <li>Getting started</li>
-            <li>Django at a glance</li>
+            <li><a href="#">Getting started</a></li>
+            <ul>
+              <li>Django at a glance</li>
+            </ul>
           </ul>
         </ul>
-        <p>Getting help</p>
-        <hr>
-        <p>FAQ</p>
+        <h3>Getting help</h3>
+        <h5><a href="#">FAQ</a></h5>
         <p>Try the FAQ — it's got answers to many common questions.</p>
-        <hr>
-        <p>Index, Module Index, or Table of Contents</p>
+
+        <h5><a href="#">Index, Module Index, or Table of Contents</a></h5>
         <p>Handy when looking for specific information.</p>
-        <hr>
-        <p>django-users mailing list</p>
+
+        <h5><a href="#">django-users mailing list</a></h5>
         <p>Search for information in the archives of the django-users mailing list, or post a question.</p>
-        <hr>
-        <p>#django IRC channel</p>
+
+        <h5><a href="#">#django IRC channel</a></h5>
         <p>Ask a question in the #django IRC channel, or search the IRC logs to see if it’s been asked before.</p>
-        <hr>
-        <p>Ticket tracker</p>
+
+        <h5><a href="#">Ticket tracker</a></h5>
         <p>Report bugs with Django or Django documentation in our ticket tracker.</p>
-        <hr>
-        <p>Download:</p>
-        <hr>
-        <p>Offline (Django 3.1): HTML | PDF | ePub</p>
-        <p>Provided by Read the Docs.</p>
+
+        <h3>Download:</h3>
+
+        <p>Offline (Django 3.1): <a href="#">HTML</a> | <a href="#">PDF</a> | <a href="#">ePub</a></p>
+        <p>Provided by <a href="#">Read the Docs.</a></p>
         </p>
       </aside>
     </article>
@@ -101,11 +99,13 @@
       </p>
     </article>
     <article>
-      <p><strong>Design your model</strong> </p>
-      <p>Although you can use Django without a database, it comes with an object-relational mapper in which you describe
+      <h3>Design your model</h3>
+      <p>Although you can use Django without a database, it comes with an object-relational mapper in which you
+        describe
         your
         database layout in Python code.</p>
-      <p>The data-model syntax offers many rich ways of representing your models – so far, it’s been solving many years’
+      <p>The data-model syntax offers many rich ways of representing your models – so far, it’s been solving many
+        years’
         worth of
         database-schema problems. Here’s a quick example:</p>
       <pre><code>
@@ -128,25 +128,27 @@
       return self.headline
       </code></pre>
     </article>
-    <hr>
+
     <article>
-      <p><strong>Install it</strong> </p>
+      <h3>Install it </h3>
       <p>Next, run the Django command-line utilities to create the database tables automatically:</p>
       <pre> <code>
       $ python manage.py makemigrations 
       $ python manage.py migrate
     </code>
   </pre>
-      <p>The makemigrations command looks at all your available models and creates migrations for whichever tables don’t
+      <p>The makemigrations command looks at all your available models and creates migrations for whichever tables
+        don’t
         already
         exist. migrate runs the migrations and creates tables in your database, as well as optionally providing much
         richer
         schema control.</p>
     </article>
-    <hr>
+
     <article>
-      <p><strong>Enjoy the free API</strong></p>
-      <p>With that, you’ve got a free, and rich, Python API to access your data. The API is created on the fly, no code
+      <h3>Enjoy the free API </h3>
+      <p>With that, you’ve got a free, and rich, Python API to access your data. The API is created on the fly, no
+        code
         generation necessary:</p>
       <pre>
       <code>
@@ -221,7 +223,240 @@
       </code>
     </pre>
     </article>
-    <hr>
+    <article>
+      <h3>A dynamic admin interface: it’s not just scaffolding – it’s the whole house</h3>
+      <p>Once your models are defined, Django can automatically create a professional, production ready administrative
+        interface
+        – a website that lets authenticated users add, change and delete objects. The only step required is to register
+        your
+        model in the admin site:</p>
+      <pre>
+          <code>
+            mysite/news/models.py
+
+            from django.db import models
+            
+            class Article(models.Model):
+                pub_date = models.DateField()
+                headline = models.CharField(max_length=200)
+                content = models.TextField()
+                reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+          </code>
+          <code>
+            mysite/news/admin.py
+
+            from django.contrib import admin
+            
+            from . import models
+            
+            admin.site.register(models.Article)
+          </code>
+        </pre>
+      <p>The philosophy here is that your site is edited by a staff, or a client, or maybe just you – and you don’t want
+        to have
+        to deal with creating backend interfaces only to manage content.</p>
+      <p>One typical workflow in creating Django apps is to create models and get the admin sites up and running as fast
+        as
+        possible, so your staff (or clients) can start populating data. Then, develop the way data is presented to the
+        public.</p>
+    </article>
+    <article>
+      <h3>Design your URLs</h3>
+      <p>A clean, elegant URL scheme is an important detail in a high-quality Web application. Django encourages
+        beautiful URL
+        design and doesn’t put any cruft in URLs, like <strong>.php</strong> or <strong>.asp</strong>.</p>
+      <p>To design URLs for an app, you create a Python module called a URLconf. A table of contents for your app, it
+        contains a
+        mapping between URL patterns and Python callback functions. URLconfs also serve to decouple URLs from Python
+        code.</p>
+      <p>Here’s what a URLconf might look like for the <strong>Reporter/Article</strong> example above:</p>
+      <pre>
+        <code>
+          mysite/news/urls.py¶
+          from django.urls import path
+          
+          from . import views
+          
+          urlpatterns = [
+          path('articles/&#60;int:year&#62;/', views.year_archive),
+            path('articles/&#60;int:year&#62;/&#60;int:month&#62;/', views.month_archive),
+                path('articles/&#60;int:year\&#62;/&#60;int:month&#62;/&#60;int:pk&#62;/', views.article_detail),
+                      ]
+        </code>
+      </pre>
+      <p>The code above maps URL paths to Python callback functions (“views”). The path strings use parameter tags to
+        “capture”
+        values from the URLs. When a user requests a page, Django runs through each path, in order, and stops at the
+        first one
+        that matches the requested URL. (If none of them matches, Django calls a special-case 404 view.) This is
+        blazingly fast,
+        because the paths are compiled into regular expressions at load time.
+      </p>
+      <p>
+        Once one of the URL patterns matches, Django calls the given view, which is a Python function. Each view gets
+        passed a
+        request object – which contains request metadata – and the values captured in the pattern.
+      </p>
+      <p>
+        For example, if a user requested the URL “/articles/2005/05/39323/”, Django would call the function
+        <strong>news.views.article_detail(request, year=2005, month=5, pk=39323)</strong>.
+      </p>
+    </article>
+    <article>
+      <h3>
+        Write your views
+      </h3>
+      <p>
+        Each view is responsible for doing one of two things: Returning an <strong>HttpResponse</strong> object
+        containing the content for the
+        requested page, or raising an exception such as <strong>Http404</strong>. The rest is up to you.
+      </p>
+      <p>
+        Generally, a view retrieves data according to the parameters, loads a template and renders the template with the
+        retrieved data. Here’s an example view for <strong>year_archive</strong> from above:
+      </p>
+      <pre>
+        <code>
+          mysite/news/views.py¶
+          from django.shortcuts import render
+          
+          from .models import Article
+          
+          def year_archive(request, year):
+              a_list = Article.objects.filter(pub_date__year=year)
+              context = {'year': year, 'article_list': a_list}
+              return render(request, 'news/year_archive.html', context)
+        </code>
+      </pre>
+      <p>
+        This example uses Django’s <a href="#">template system</a>, which has several powerful features but strives to
+        stay simple enough for
+        non-programmers to use.
+      </p>
+    </article>
+    <article>
+      <h3>Design your templates</h3>
+      <p>The code above loads the <strong>news/year_archive.html</strong> template.</p>
+      <p>
+        Django has a template search path, which allows you to minimize redundancy among templates. In your Django
+        settings, you
+        specify a list of directories to check for templates with <strong>DIRS</strong>. If a template doesn’t exist in
+        the first
+        directory, it
+        checks the second, and so on.
+      </p>
+      <p>
+        Let’s say the <strong>news/year_archive.html</strong> template was found. Here’s what that might look like:
+      </p>
+      <pre>
+      <code>
+        mysite/news/templates/news/year_archive.html
+
+        {% extends "base.html" %}
+        
+        {% block title %}Articles for {{ year }}{% endblock %}
+        
+        {% block content %}
+        &#60;h1>Articles for {{ year }}&#60;/h1>
+        
+        {% for article in article_list %}
+        &#60;p>{{ article.headline }}&#60;/p>
+        &#60;p>By {{ article.reporter.full_name }}&#60;/p>
+        &#60;p>Published {{ article.pub_date|date:"F j, Y" }}&#60;/p>
+        {% endfor %}
+        {% endblock %}
+      </code>
+    </pre>
+      <p>
+        Variables are surrounded by double-curly braces. {{ article.headline }} means “Output the value of the article’s
+        headline attribute.” But dots aren’t used only for attribute lookup. They also can do dictionary-key lookup,
+        index
+        lookup and function calls.
+      </p>
+      <p>
+        Note {{ article.pub_date|date:"F j, Y" }} uses a Unix-style “pipe” (the “|” character). This is called a
+        template
+        filter, and it’s a way to filter the value of a variable. In this case, the date filter formats a Python
+        datetime
+        object
+        in the given format (as found in PHP’s date function).
+      </p>
+      <p>
+        You can chain together as many filters as you’d like. You can write custom template filters. You can write
+        custom
+        template tags, which run custom Python code behind the scenes.
+      </p>
+      <p>
+        Finally, Django uses the concept of “template inheritance”. That’s what the {% extends "base.html" %} does. It
+        means
+        “First load the template called ‘base’, which has defined a bunch of blocks, and fill the blocks with the
+        following
+        blocks.” In short, that lets you dramatically cut down on redundancy in templates: each template has to define
+        only
+        what’s unique to that template.
+      </p>
+      <p>
+        Here’s what the “base.html” template, including the use of static files, might look like:
+      </p>
+      <pre>
+      <code>
+        mysite/templates/base.html
+
+        {% load static %}
+        &#60;html>
+        
+        &#60;head>
+          &#60;title>{% block title %}{% endblock %}&#60;/title>
+        &#60;/head>
+        
+        &#60;body>
+          &#60;img src="{% static 'images/sitelogo.png' %}" alt="Logo">
+          {% block content %}{% endblock %}
+        &#60;/body>
+        
+        &#60;/html>
+      </code>
+    </pre>
+      <p>
+        Simplistically, it defines the look-and-feel of the site (with the site’s logo), and provides “holes” for child
+        templates to fill. This means that a site redesign can be done by changing a single file – the base template.
+      </p>
+      <p>
+        It also lets you create multiple versions of a site, with different base templates, while reusing child
+        templates.
+        Django’s creators have used this technique to create strikingly different mobile versions of sites by only
+        creating a
+        new base template.
+      </p>
+      <p>
+        Note that you don’t have to use Django’s template system if you prefer another system. While Django’s template
+        system is
+        particularly well-integrated with Django’s model layer, nothing forces you to use it. For that matter, you don’t
+        have to
+        use Django’s database API, either. You can use another database abstraction layer, you can read XML files, you
+        can
+        read
+        files off disk, or anything you want. Each piece of Django – models, views, templates – is decoupled from the
+        next.
+      </p>
+    </article>
+    <article>
+      <h3>This is just the surface</h3>
+      <p>
+        This has been only a quick overview of Django’s functionality. Some more useful features:
+      </p>
+      <ul>
+        <li>A caching framework that integrates with memcached or other backends.</li>
+        <li>A syndication framework that lets you create RSS and Atom feeds by writing a small Python class.</li>
+        <li>More attractive automatically-generated admin features – this overview barely scratched the surface.</li>
+      </ul>
+      <p>The next steps are for you to download Django, read the tutorial and join the community. Thanks for your
+        interest!</p>
+    </article>
+    <nav>
+      <a href="#"><strong>&#60; Getting started</strong></a>
+      <a href="#"><strong>Quick install guide &#62;</strong></a>
+    </nav>
   </main>
   <footer>
     <nav>
@@ -256,11 +491,10 @@
         <li>Benevity Workplace Giving Program</li>
       </ul>
     </nav>
-    <nav>
-      <strong>django</strong> Hosting by <em>rackspace</em> Design by threespot. & andrevv<br>
-      © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the Django
-      Software Foundation.
-    </nav>
+    <p><strong>django</strong> Hosting by <em>rackspace</em> Design by threespot. & andrevv<br>
+      © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the
+      Django
+      Software Foundation.</p>
   </footer>
 </body>
 
