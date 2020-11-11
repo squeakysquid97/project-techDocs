@@ -22,68 +22,66 @@
     <h3>Documentation <input type="text" title="search bar" placeholder="Search 3.1 documentation"></h3>
   </header>
   <main>
-    <article>
-      <aside>
-        <h3>Support Django!</h3>
-        <p>
-          FARM Digital donated to the Django Software Foundation to support Django development. Donate today!
-        <h3>Contents</h3>
+    <aside>
+      <h3>Support Django!</h3>
+      <p>
+        FARM Digital donated to the Django Software Foundation to support Django development. Donate today!
+      <h3>Contents</h3>
 
-        <ul>
-          <li><a href="#">Django at a glance</a>
-            <ul>
-              <li><a href="#">Design your model</a></li>
-              <li><a href="#">Install it</a></li>
-              <li><a href="#">Enjoy the free API</a></li>
-              <li><a href="#">A dynamic admin interface: it’s not just scaffolding – it’s the whole house</a></li>
-              <li><a href="#">Design your URLs</a></li>
-              <li><a href="#">Write your views</a></li>
-              <li><a href="#">Design your templates</a></li>
-              <li><a href="#">This is just the surface</a></li>
-            </ul>
-          </li>
-        </ul>
-        <h3>Browse</h3>
-        <ul>
-          <li>Prev: <a href="#">Getting started</a></li>
-          <li>Next: <a href="#">Quick install guide</a></li>
-          <li><a href="#">Table of contents</a></li>
-          <li><a href="#">General Index</a></li>
-          <li><a href="#">Python Module Index</a></li>
-        </ul>
-        <h3>You are here:</h3>
-        <ul>
-          <li><a href="#">Django 3.1 documentation</a>
-            <ul>
-              <li><a href="#">Getting started</a></li>
-              <li>Django at a glance</li>
-          </li>
-        </ul>
-        </ul>
-        <h3>Getting help</h3>
-        <h4><a href="#">FAQ</a></h4>
-        <p>Try the FAQ — it's got answers to many common questions.</p>
+      <ul>
+        <li><a href="#">Django at a glance</a>
+          <ul>
+            <li><a href="#">Design your model</a></li>
+            <li><a href="#">Install it</a></li>
+            <li><a href="#">Enjoy the free API</a></li>
+            <li><a href="#">A dynamic admin interface: it’s not just scaffolding – it’s the whole house</a></li>
+            <li><a href="#">Design your URLs</a></li>
+            <li><a href="#">Write your views</a></li>
+            <li><a href="#">Design your templates</a></li>
+            <li><a href="#">This is just the surface</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Browse</h3>
+      <ul>
+        <li>Prev: <a href="#">Getting started</a></li>
+        <li>Next: <a href="#">Quick install guide</a></li>
+        <li><a href="#">Table of contents</a></li>
+        <li><a href="#">General Index</a></li>
+        <li><a href="#">Python Module Index</a></li>
+      </ul>
+      <h3>You are here:</h3>
+      <ul>
+        <li><a href="#">Django 3.1 documentation</a>
+          <ul>
+            <li><a href="#">Getting started</a></li>
+            <li>Django at a glance</li>
+        </li>
+      </ul>
+      </ul>
+      <h3>Getting help</h3>
+      <h4><a href="#">FAQ</a></h4>
+      <p>Try the FAQ — it's got answers to many common questions.</p>
 
-        <h5><a href="#">Index, Module Index, or Table of Contents</a></h5>
-        <p>Handy when looking for specific information.</p>
+      <h5><a href="#">Index, Module Index, or Table of Contents</a></h5>
+      <p>Handy when looking for specific information.</p>
 
-        <h5><a href="#">django-users mailing list</a></h5>
-        <p>Search for information in the archives of the django-users mailing list, or post a question.</p>
+      <h5><a href="#">django-users mailing list</a></h5>
+      <p>Search for information in the archives of the django-users mailing list, or post a question.</p>
 
-        <h5><a href="#">#django IRC channel</a></h5>
-        <p>Ask a question in the #django IRC channel, or search the IRC logs to see if it’s been asked before.</p>
+      <h5><a href="#">#django IRC channel</a></h5>
+      <p>Ask a question in the #django IRC channel, or search the IRC logs to see if it’s been asked before.</p>
 
-        <h5><a href="#">Ticket tracker</a></h5>
-        <p>Report bugs with Django or Django documentation in our ticket tracker.</p>
+      <h5><a href="#">Ticket tracker</a></h5>
+      <p>Report bugs with Django or Django documentation in our ticket tracker.</p>
 
-        <h3>Download:</h3>
+      <h3>Download:</h3>
 
-        <p>Offline (Django 3.1): <a href="#">HTML</a> | <a href="#">PDF</a> | <a href="#">ePub</a></p>
-        <p>Provided by <a href="#">Read the Docs.</a></p>
+      <p>Offline (Django 3.1): <a href="#">HTML</a> | <a href="#">PDF</a> | <a href="#">ePub</a></p>
+      <p>Provided by <a href="#">Read the Docs.</a></p>
 
-      </aside>
-    </article>
-    <article>
+    </aside>
+    <section>
       <h3>Django at a glance</h3>
       <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common
         Web-development
@@ -97,8 +95,6 @@
         with
         the tutorial or dive right into more detailed documentation.
       </p>
-    </article>
-    <article>
       <h3>Design your model</h3>
       <p>Although you can use Django without a database, it comes with an object-relational mapper in which you
         describe
@@ -117,7 +113,7 @@
       def __str__(self):
       return self.full_name
       
-      class Article(models.Model):
+      class section(models.Model):
       
       pub_date = models.DateField()
       headline = models.CharField(max_length=200)
@@ -127,9 +123,6 @@
       def __str__(self):
       return self.headline
       </code></pre>
-    </article>
-
-    <article>
       <h3>Install it </h3>
       <p>Next, run the Django command-line utilities to create the database tables automatically:</p>
       <pre> <code>
@@ -143,9 +136,6 @@
         exist. migrate runs the migrations and creates tables in your database, as well as optionally providing much
         richer
         schema control.</p>
-    </article>
-
-    <article>
       <h3>Enjoy the free API </h3>
       <p>With that, you’ve got a free, and rich, Python API to access your data. The API is created on the fly, no
         code
@@ -153,7 +143,7 @@
       <pre>
       <code>
       # Import the models we created from our "news" app
-      >>> from news.models import Article, Reporter
+      >>> from news.models import section, Reporter
 
       # No reporters are in the system yet.
       >>> Reporter.objects.all()
@@ -189,30 +179,30 @@
         ...
       DoesNotExist: Reporter matching query does not exist.
 
-      # Create an article.
+      # Create an section.
       >>> from datetime import date
-      >>> a = Article(pub_date=date.today(), headline='Django is cool',
+      >>> a = section(pub_date=date.today(), headline='Django is cool',
       ...     content='Yeah.', reporter=r)
       >>> a.save()
 
-      # Now the article is in the database.
-      >>> Article.objects.all()
-      &#60;QuerySet [&#60;Article: Django is cool&#62;]
+      # Now the section is in the database.
+      >>> section.objects.all()
+      &#60;QuerySet [&#60;section: Django is cool&#62;]
 
-      # Article objects get API access to related Reporter objects.
+      # section objects get API access to related Reporter objects.
       >>> r = a.reporter
       >>> r.full_name
       'John Smith'
 
-      # And vice versa: Reporter objects get API access to Article objects.
-      >>> r.article_set.all()
-      &#60;QuerySet [&#60;Article: Django is cool>]>
+      # And vice versa: Reporter objects get API access to section objects.
+      >>> r.section_set.all()
+      &#60;QuerySet [&#60;section: Django is cool>]>
 
       # The API follows relationships as far as you need, performing efficient
       # JOINs for you behind the scenes.
-      # This finds all articles by a reporter whose name starts with "John".
-      >>> Article.objects.filter(reporter__full_name__startswith='John')
-      &#60;QuerySet [&#60;Article: Django is cool>]>
+      # This finds all sections by a reporter whose name starts with "John".
+      >>> section.objects.filter(reporter__full_name__startswith='John')
+      &#60;QuerySet [&#60;section: Django is cool>]>
 
       # Change an object by altering its attributes and calling save().
       >>> r.full_name = 'Billy Goat'
@@ -222,8 +212,6 @@
       >>> r.delete()
       </code>
     </pre>
-    </article>
-    <article>
       <h3>A dynamic admin interface: it’s not just scaffolding – it’s the whole house</h3>
       <p>Once your models are defined, Django can automatically create a professional, production ready administrative
         interface
@@ -236,7 +224,7 @@
 
             from django.db import models
             
-            class Article(models.Model):
+            class section(models.Model):
                 pub_date = models.DateField()
                 headline = models.CharField(max_length=200)
                 content = models.TextField()
@@ -249,7 +237,7 @@
             
             from . import models
             
-            admin.site.register(models.Article)
+            admin.site.register(models.section)
           </code>
         </pre>
       <p>The philosophy here is that your site is edited by a staff, or a client, or maybe just you – and you don’t want
@@ -259,8 +247,6 @@
         as
         possible, so your staff (or clients) can start populating data. Then, develop the way data is presented to the
         public.</p>
-    </article>
-    <article>
       <h3>Design your URLs</h3>
       <p>A clean, elegant URL scheme is an important detail in a high-quality Web application. Django encourages
         beautiful URL
@@ -269,7 +255,7 @@
         contains a
         mapping between URL patterns and Python callback functions. URLconfs also serve to decouple URLs from Python
         code.</p>
-      <p>Here’s what a URLconf might look like for the <strong>Reporter/Article</strong> example above:</p>
+      <p>Here’s what a URLconf might look like for the <strong>Reporter/section</strong> example above:</p>
       <pre>
         <code>
           mysite/news/urls.py¶
@@ -278,9 +264,9 @@
           from . import views
           
           urlpatterns = [
-          path('articles/&#60;int:year&#62;/', views.year_archive),
-            path('articles/&#60;int:year&#62;/&#60;int:month&#62;/', views.month_archive),
-                path('articles/&#60;int:year\&#62;/&#60;int:month&#62;/&#60;int:pk&#62;/', views.article_detail),
+          path('sections/&#60;int:year&#62;/', views.year_archive),
+            path('sections/&#60;int:year&#62;/&#60;int:month&#62;/', views.month_archive),
+                path('sections/&#60;int:year\&#62;/&#60;int:month&#62;/&#60;int:pk&#62;/', views.section_detail),
                       ]
         </code>
       </pre>
@@ -298,11 +284,9 @@
         request object – which contains request metadata – and the values captured in the pattern.
       </p>
       <p>
-        For example, if a user requested the URL “/articles/2005/05/39323/”, Django would call the function
-        <strong>news.views.article_detail(request, year=2005, month=5, pk=39323)</strong>.
+        For example, if a user requested the URL “/sections/2005/05/39323/”, Django would call the function
+        <strong>news.views.section_detail(request, year=2005, month=5, pk=39323)</strong>.
       </p>
-    </article>
-    <article>
       <h3>
         Write your views
       </h3>
@@ -320,11 +304,11 @@
           mysite/news/views.py¶
           from django.shortcuts import render
           
-          from .models import Article
+          from .models import section
           
           def year_archive(request, year):
-              a_list = Article.objects.filter(pub_date__year=year)
-              context = {'year': year, 'article_list': a_list}
+              a_list = section.objects.filter(pub_date__year=year)
+              context = {'year': year, 'section_list': a_list}
               return render(request, 'news/year_archive.html', context)
         </code>
       </pre>
@@ -333,8 +317,6 @@
         stay simple enough for
         non-programmers to use.
       </p>
-    </article>
-    <article>
       <h3>Design your templates</h3>
       <p>The code above loads the <strong>news/year_archive.html</strong> template.</p>
       <p>
@@ -354,27 +336,27 @@
 
         {% extends "base.html" %}
         
-        {% block title %}Articles for {{ year }}{% endblock %}
+        {% block title %}sections for {{ year }}{% endblock %}
         
         {% block content %}
-        &#60;h1>Articles for {{ year }}&#60;/h1>
+        &#60;h1>sections for {{ year }}&#60;/h1>
         
-        {% for article in article_list %}
-        &#60;p>{{ article.headline }}&#60;/p>
-        &#60;p>By {{ article.reporter.full_name }}&#60;/p>
-        &#60;p>Published {{ article.pub_date|date:"F j, Y" }}&#60;/p>
+        {% for section in section_list %}
+        &#60;p>{{ section.headline }}&#60;/p>
+        &#60;p>By {{ section.reporter.full_name }}&#60;/p>
+        &#60;p>Published {{ section.pub_date|date:"F j, Y" }}&#60;/p>
         {% endfor %}
         {% endblock %}
       </code>
     </pre>
       <p>
-        Variables are surrounded by double-curly braces. {{ article.headline }} means “Output the value of the article’s
+        Variables are surrounded by double-curly braces. {{ section.headline }} means “Output the value of the section’s
         headline attribute.” But dots aren’t used only for attribute lookup. They also can do dictionary-key lookup,
         index
         lookup and function calls.
       </p>
       <p>
-        Note {{ article.pub_date|date:"F j, Y" }} uses a Unix-style “pipe” (the “|” character). This is called a
+        Note {{ section.pub_date|date:"F j, Y" }} uses a Unix-style “pipe” (the “|” character). This is called a
         template
         filter, and it’s a way to filter the value of a variable. In this case, the date filter formats a Python
         datetime
@@ -439,8 +421,7 @@
         files off disk, or anything you want. Each piece of Django – models, views, templates – is decoupled from the
         next.
       </p>
-    </article>
-    <article>
+
       <h3>This is just the surface</h3>
       <p>
         This has been only a quick overview of Django’s functionality. Some more useful features:
@@ -452,7 +433,7 @@
       </ul>
       <p>The next steps are for you to download Django, read the tutorial and join the community. Thanks for your
         interest!</p>
-    </article>
+    </section>
     <nav>
       <a href="#"><strong>&#60; Getting started</strong></a>
       <a href="#"><strong>Quick install guide &#62;</strong></a>
