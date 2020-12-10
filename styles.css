@@ -1,0 +1,87 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  line-height: 1.6rem;
+  margin-right: 20rem;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  margin-right: 3rem;
+}
+
+header h3 {
+  width: 100%;
+}
+
+header h3:first-of-type {
+  background: darkgreen;
+  width: 100%;
+  margin-top: -0.9rem;
+  height: 5vh;
+  color: white;
+  font-size: 3rem;
+}
+
+header h3:last-of-type {
+  width: 100%;
+}
+section pre {
+  background: black;
+  color: white;
+  font-size: 2rem;
+  margin: 2rem 5rem;
+}
+
+main {
+  margin-right: 3rem;
+}
+
+main aside {
+  width: 20rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: forestgreen;
+  overflow-x: hidden;
+  margin-left: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+main nav {
+  border-bottom: 1p solid black;
+  border-top: 1px solid black;
+  padding: 3rem;
+  justify-content: space-between;
+  height: 3vh;
+}
+
+main nav a {
+  padding: 15%;
+}
+main p {
+  font-size: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+footer nav {
+}
