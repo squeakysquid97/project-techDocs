@@ -5,6 +5,8 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Lato", sans-serif;
+  line-height: 1.3;
 }
 
 body {
@@ -12,33 +14,70 @@ body {
   flex-direction: column;
   font-size: 2rem;
   line-height: 1.6rem;
-  margin-right: 20rem;
+  margin: 0;
 }
 
-header {
+.header {
   display: flex;
-  flex-wrap: wrap;
-}
-
-header nav a {
-  margin-right: 3rem;
-}
-
-header h3 {
+  flex-direction: column;
+  background-color: #0c4b33;
+  padding: 2rem;
   width: 100%;
 }
 
-header h3:first-of-type {
-  background: darkgreen;
-  width: 100%;
-  margin-top: -0.9rem;
-  height: 5vh;
+.header__heading--firstWord {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: lowercase;
   color: white;
-  font-size: 3rem;
 }
 
-header h3:last-of-type {
+.header__heading--lastWord {
+  color: #43b58a;
+}
+.header__heading {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.break {
+  margin: 0 2rem;
+}
+
+.nav__container {
+  margin: 1rem 0;
   width: 100%;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav--listItem {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #44b78b;
+  align-items: center;
+  padding: 0 2rem;
+  height: 8rem;
+}
+
+.header__document {
+}
+
+.header__search {
+  width: 20%;
+  height: 5rem;
+  font-size: 2rem;
+}
+
+.header__search::placeholder {
+  text-align: center;
 }
 section pre {
   background: black;
@@ -48,34 +87,54 @@ section pre {
 }
 
 main {
-  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
-main aside {
-  width: 20rem;
-  position: fixed;
-  z-index: 1;
-  top: 0;
+.sidebar {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 24.5rem;
   right: 0;
-  background-color: forestgreen;
-  overflow-x: hidden;
+  background-color: #44b78b;
+  color: #fff;
+  padding: 1rem;
   margin-left: 5rem;
-  margin-bottom: 0.5rem;
 }
 
-main nav {
-  border-bottom: 1p solid black;
-  border-top: 1px solid black;
-  padding: 3rem;
+.sidebar__content {
+  flex: 0 1 auto;
+}
+.content {
+  margin: 0 30% 0 2rem;
+  padding: 0 2rem 0 0;
+}
+
+.content__heading {
+  font-weight: 700;
+}
+
+.code__container {
+  background-color: #f8f8f8;
+}
+
+.code__container--content {
+  padding: 0;
+  font-family: monospace, sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.pageSwitch {
+  background-color: #44b78b;
+  width: 100%;
+  display: flex;
   justify-content: space-between;
-  height: 3vh;
-}
-
-main nav a {
-  padding: 15%;
-}
-main p {
-  font-size: 2rem;
+  padding: 2rem 10%;
+  margin: 2rem 0 2rem 0;
 }
 
 footer {
