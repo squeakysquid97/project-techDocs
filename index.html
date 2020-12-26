@@ -10,10 +10,10 @@
 
 <body>
   <header class="header">
-    <h1 class="header__heading"><span class="header__heading--firstWord">Django</span><span class="break"></span>
-      <span class="header__heading--lastWord">The
+    <h1 class="header__heading"><span class="logo">Django</span>
+      <p class="header__heading--lastWord">The
         web framework for perfectionists
-        with deadlines.</span>
+        with deadlines.</p>
     </h1>
     <div class="nav__container">
       <nav class="header__nav">
@@ -34,6 +34,7 @@
       placeholder="Search 3.1 documentation">
   </div>
   <main>
+    <!-- TODO: Need to add javascript to add breakpoints to make this sticky  -->
     <aside class="sidebar">
       <h3 class="sidebar__header">Support Django!</h3>
       <p class="sidebar__header--sub">
@@ -42,32 +43,34 @@
       <div class="sidebar__content">
         <ul class="sidebar__nav">
           <li class="sidebar__nav--listItem"><a href="#">Django at a glance</a>
-            <ul>
-              <li><a href="#">Design your model</a></li>
-              <li><a href="#">Install it</a></li>
-              <li><a href="#">Enjoy the free API</a></li>
-              <li><a href="#">A dynamic admin interface: it’s not just scaffolding – it’s the whole house</a></li>
-              <li><a href="#">Design your URLs</a></li>
-              <li><a href="#">Write your views</a></li>
-              <li><a href="#">Design your templates</a></li>
-              <li><a href="#">This is just the surface</a></li>
+            <ul class="sidebar__nav">
+              <li class="sidebar__nav--listItem"><a href="#top">Design your model</a></li>
+              <li class="sidebar__nav--listItem"><a href="#install">Install it</a></li>
+              <li class="sidebar__nav--listItem"><a href="#enjoy">Enjoy the free API</a></li>
+              <li class="sidebar__nav--listItem"><a href="#dynamic">A dynamic admin interface: it’s not just scaffolding
+                  – it’s
+                  the whole house</a></li>
+              <li class="sidebar__nav--listItem"><a href="#design">Design your URLs</a></li>
+              <li class="sidebar__nav--listItem"><a href="#write">Write your views</a></li>
+              <li class="sidebar__nav--listItem"><a href="#template">Design your templates</a></li>
+              <li class="sidebar__nav--listItem"><a href="#surface">This is just the surface</a></li>
             </ul>
           </li>
         </ul>
-        <h3 class="content__heading">Browse</h3>
-        <ul>
-          <li>Prev: <a href="#">Getting started</a></li>
-          <li>Next: <a href="#">Quick install guide</a></li>
-          <li><a href="#">Table of contents</a></li>
-          <li><a href="#">General Index</a></li>
-          <li><a href="#">Python Module Index</a></li>
+        <h3 class="sidebar__nav--header">Browse</h3>
+        <ul class="sidebar__nav">
+          <li class="sidebar__nav--listItem">Prev: <a href="#">Getting started</a></li>
+          <li class="sidebar__nav--listItem">Next: <a href="#">Quick install guide</a></li>
+          <li class="sidebar__nav--listItem"><a href="#">Table of contents</a></li>
+          <li class="sidebar__nav--listItem"><a href="#">General Index</a></li>
+          <li class="sidebar__nav--listItem"><a href="#">Python Module Index</a></li>
         </ul>
         <h3 class="content__heading">You are here:</h3>
-        <ul>
-          <li><a href="#">Django 3.1 documentation</a>
-            <ul>
-              <li><a href="#">Getting started</a></li>
-              <li>Django at a glance</li>
+        <ul class="sidebar__nav">
+          <li class="sidebar__nav--listItem"><a href="#">Django 3.1 documentation</a>
+            <ul class="sidebar__nav">
+              <li class="sidebar__nav--listItem"><a href="#">Getting started</a></li>
+              <li class="sidebar__nav--listItem"><a href="#">Django at a glance</a></li>
           </li>
         </ul>
         </ul>
@@ -136,7 +139,7 @@
       def __str__(self):
       return self.headline
       </code></pre>
-      <h3 class="content__heading">Install it </h3>
+      <h3 class="content__heading" id="install">Install it </h3>
       <p>Next, run the Django command-line utilities to create the database tables automatically:</p>
       <pre class="code__container"> <code class="code__container--content">
       $ python manage.py makemigrations 
@@ -149,7 +152,7 @@
         exist. migrate runs the migrations and creates tables in your database, as well as optionally providing much
         richer
         schema control.</p>
-      <h3 class="content__heading">Enjoy the free API </h3>
+      <h3 class="content__heading" id="enjoy">Enjoy the free API </h3>
       <p>With that, you’ve got a free, and rich, Python API to access your data. The API is created on the fly, no
         code
         generation necessary:</p>
@@ -225,7 +228,8 @@
       >>> r.delete()
       </code>
     </pre>
-      <h3 class="content__heading">A dynamic admin interface: it’s not just scaffolding – it’s the whole house</h3>
+      <h3 class="content__heading" id="dynamic">A dynamic admin interface: it’s not just scaffolding – it’s the whole
+        house</h3>
       <p>Once your models are defined, Django can automatically create a professional, production ready administrative
         interface
         – a website that lets authenticated users add, change and delete objects. The only step required is to register
@@ -260,7 +264,7 @@
         as
         possible, so your staff (or clients) can start populating data. Then, develop the way data is presented to the
         public.</p>
-      <h3 class="content__heading">Design your URLs</h3>
+      <h3 class="content__heading" id="design">Design your URLs</h3>
       <p>A clean, elegant URL scheme is an important detail in a high-quality Web application. Django encourages
         beautiful URL
         design and doesn’t put any cruft in URLs, like <strong>.php</strong> or <strong>.asp</strong>.</p>
@@ -300,7 +304,7 @@
         For example, if a user requested the URL “/sections/2005/05/39323/”, Django would call the function
         <strong>news.views.section_detail(request, year=2005, month=5, pk=39323)</strong>.
       </p>
-      <h3 class="content__heading">
+      <h3 class="content__heading" id="write">
         Write your views
       </h3>
       <p>
@@ -330,7 +334,7 @@
         stay simple enough for
         non-programmers to use.
       </p>
-      <h3 class="content__heading"> Design your templates</h3>
+      <h3 class="content__heading" id="template"> Design your templates</h3>
       <p>The code above loads the <strong>news/year_archive.html</strong> template.</p>
       <p>
         Django has a template search path, which allows you to minimize redundancy among templates. In your Django
@@ -435,7 +439,7 @@
         next.
       </p>
 
-      <h3 class="content__heading">This is just the surface</h3>
+      <h3 class="content__heading" id="surface">This is just the surface</h3>
       <p>
         This has been only a quick overview of Django’s functionality. Some more useful features:
       </p>
@@ -446,49 +450,53 @@
       </ul>
       <p>The next steps are for you to download Django, read the tutorial and join the community. Thanks for your
         interest!</p>
+      <a href="#top" class="back-to-top">Back to Top</a>
     </section>
     <nav class="pageSwitch">
       <a class="pageSwitch__listItem" href="#"><strong>&#60; Getting started</strong></a>
       <a class="pageSwitch__listItem" href="#"><strong>Quick install guide &#62;</strong></a>
     </nav>
   </main>
-  <footer>
-    <nav>
-      Learn More
-      <ul>
-        <li>About Django</li>
-        <li>Getting Started with Django</li>
-        <li>Team Organization</li>
-        <li>Django Software Foundation</li>
-        <li>Code of Conduct</li>
-        <li>Diversity Statement</li>
-      </ul>
-      Get Involved
-      <ul>
-        <li>Join a Group</li>
-        <li>Contribute to Django</li>
-        <li>Submit a Bug</li>
-        <li>Report a Security Issue</li>
-      </ul>
-      Follow Us
-      <ul>
-        <li>GitHub</li>
-        <li>Twitter</li>
-        <li>News RSS</li>
-        <li>Django Users Mailing List</li>
-      </ul>
-      Support Us
-      <ul>
-        <li>Sponsor Django</li>
-        <li>Official merchandise store</li>
-        <li>Amazon Smile</li>
-        <li>Benevity Workplace Giving Program</li>
-      </ul>
+  <footer class="footer">
+    <nav class="footer__nav">
+      <div class="footer__nav--list">
+        <a class="footer__nav--heading" href="#">Learn More</a>
+        <a class="footer__nav--listItem"></a>About Django</a>
+        <a class="footer__nav--listItem">Getting Started with Django</a>
+        <a class="footer__nav--listItem">Team Organization</a>
+        <a class="footer__nav--listItem">Django Software Foundation</a>
+        <a class="footer__nav--listItem">Code of Conduct</a>
+        <a class="footer__nav--listItem">Diversity Statement</a>
+      </div>
+      <div class="footer__nav--list">
+        <a class="footer__nav--heading" href="#">Get Involved</a>
+        <a class="footer__nav--listItem">Join a Group</a>
+        <a class="footer__nav--listItem">Contribute to Django</a>
+        <a class="footer__nav--listItem">Submit a Bug</a>
+        <a class="footer__nav--listItem">Report a Security Issue</a>
+      </div>
+      <div class="footer__nav--list">
+        <a class="footer__nav--heading" href="#">Follow Us</a>
+        <a class="footer__nav--listItem">GitHub</a>
+        <a class="footer__nav--listItem">Twitter</a>
+        <a class="footer__nav--listItem">News RSS</a>
+        <a class="footer__nav--listItem">Django Users Mailing List</a>
+      </div>
+      <div class="footer__nav--list">
+        <a class="footer__nav--heading" href="#">Support Us</a>
+        <a class="footer__nav--listItem">Sponsor Django</a>
+        <a class="footer__nav--listItem">Official merchandise store</a>
+        <a class="footer__nav--listItem">Amazon Smile</a>
+        <a class="footer__nav--listItem">Benevity Workplace Giving Program</a>
+      </div>
     </nav>
-    <p><strong>django</strong> Hosting by <em>rackspace</em> Design by threespot. & andrevv<br>
-      © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the
-      Django
-      Software Foundation.</p>
+    <div class="footer__bottom">
+      <div class="logo logo__bottom">django</div>
+      <p class="footer__bottom--paragraph">Hosting by <em>rackspace</em><br> Design by threespot. & andrevv<br>
+        © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the
+        Django
+        Software Foundation.</p>
+    </div>
   </footer>
 </body>
 
