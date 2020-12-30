@@ -14,9 +14,14 @@
       <p class="header__heading--lastWord">The
         web framework for perfectionists
         with deadlines.</p>
+
+      <label class="hamburger__label" for="hamburger">&#9776;</label>
+      <input type="checkbox" class="hamburger">
+
     </h1>
+
     <div class="nav__container">
-      <nav class="header__nav">
+      <div class="header__nav">
         <a class="header__nav--listItem" href="#">OVERVIEW</a>
         <a class="header__nav--listItem" href="#">DOWNLOAD</a>
         <a class="header__nav--listItem" href="#">DOCUMENTATION</a>
@@ -26,7 +31,7 @@
         <a class="header__nav--listItem" href="#">ISSUES</a>
         <a class="header__nav--listItem" href="#">ABOUT</a>
         <a class="header__nav--listItem" href="#">♥ DONATE</a>
-      </nav>
+      </div>
     </div>
   </header>
   <div class="search__container">
@@ -36,11 +41,12 @@
   <main>
     <!-- TODO: Need to add javascript to add breakpoints to make this sticky  -->
     <aside class="sidebar">
-      <h3 class="sidebar__header">Support Django!</h3>
-      <p class="sidebar__header--sub">
-        FARM Digital donated to the Django Software Foundation to support Django development. Donate today!
-      <h3 class="sidebar__nav--header">Contents</h3>
+
       <div class="sidebar__content">
+        <h3 class="sidebar__header">Support Django!</h3>
+        <p class="sidebar__header--sub">
+          FARM Digital donated to the Django Software Foundation to support Django development. Donate today!
+        <h3 class="sidebar__nav--header">Contents</h3>
         <ul class="sidebar__nav">
           <li class="sidebar__nav--listItem"><a href="#">Django at a glance</a>
             <ul class="sidebar__nav">
@@ -237,15 +243,15 @@
         model in the admin site:</p>
       <pre class="code__container">
           <code class="code__container--content">
-            mysite/news/models.py
+  mysite/news/models.py
 
-            from django.db import models
+  from django.db import models
             
-            class section(models.Model):
-                pub_date = models.DateField()
-                headline = models.CharField(max_length=200)
-                content = models.TextField()
-                reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
+  class section(models.Model):
+      pub_date = models.DateField()
+      headline = models.CharField(max_length=200)
+      content = models.TextField()
+      reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
           </code>
           <code class="code__container--content">
             mysite/news/admin.py
@@ -275,16 +281,16 @@
       <p>Here’s what a URLconf might look like for the <strong>Reporter/section</strong> example above:</p>
       <pre class="code__container">
         <code class="code__container--content">
-          mysite/news/urls.py¶
-          from django.urls import path
+  mysite/news/urls.py¶
+  from django.urls import path
           
-          from . import views
+  from . import views
           
-          urlpatterns = [
-          path('sections/&#60;int:year&#62;/', views.year_archive),
-            path('sections/&#60;int:year&#62;/&#60;int:month&#62;/', views.month_archive),
-                path('sections/&#60;int:year\&#62;/&#60;int:month&#62;/&#60;int:pk&#62;/', views.section_detail),
-                      ]
+  urlpatterns = [
+  path('sections/&#60;int:year&#62;/', views.year_archive),
+    path('sections/&#60;int:year&#62;/&#60;int:month&#62;/', views.month_archive),
+        path('sections/&#60;int:year\&#62;/&#60;int:month&#62;/&#60;int:pk&#62;/', views.section_detail),
+              ]
         </code>
       </pre>
       <p>The code above maps URL paths to Python callback functions (“views”). The path strings use parameter tags to
@@ -318,15 +324,15 @@
       </p>
       <pre class="code__container">
         <code class="code__container--content">
-          mysite/news/views.py¶
-          from django.shortcuts import render
+  mysite/news/views.py¶
+  from django.shortcuts import render
           
-          from .models import section
+  from .models import section
           
-          def year_archive(request, year):
-              a_list = section.objects.filter(pub_date__year=year)
-              context = {'year': year, 'section_list': a_list}
-              return render(request, 'news/year_archive.html', context)
+  def year_archive(request, year):
+      a_list = section.objects.filter(pub_date__year=year)
+      context = {'year': year, 'section_list': a_list}
+      return render(request, 'news/year_archive.html', context)
         </code>
       </pre>
       <p>

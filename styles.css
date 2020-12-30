@@ -15,6 +15,7 @@ body {
   font-size: 2rem;
   line-height: 1.6rem;
   margin: 0;
+  width: 100%;
 }
 
 .header {
@@ -41,7 +42,9 @@ body {
   color: #43b58a;
   margin: 1.8rem;
 }
-
+.hamburger {
+  display: none;
+}
 /* .break {
   margin: 0 2rem;
 } */
@@ -68,9 +71,6 @@ body {
   align-items: center;
   padding: 0 2rem;
   height: 8rem;
-}
-
-.header__document {
 }
 
 .header__search {
@@ -149,6 +149,7 @@ section pre {
 }
 
 .footer {
+  font-size: 1.5rem;
   background-color: #43b58a;
   width: 100%;
   display: flex;
@@ -159,9 +160,6 @@ section pre {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.footer__nav--heading {
 }
 
 .footer__nav--listItem {
@@ -183,4 +181,68 @@ section pre {
 }
 .footer__bottom--paragraph {
   padding: 0 1rem;
+}
+
+@media screen and (max-device-width: 700px) {
+  .sidebar {
+    position: unset;
+    width: 100%;
+    top: 0;
+    margin-left: 0;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  .code__container {
+    width: 100%;
+    margin: 0;
+    overflow: scroll;
+    max-width: 100%;
+  }
+
+  .code__container--content {
+    margin: 0;
+  }
+  .footer {
+    text-align: center;
+  }
+
+  .footer__nav,
+  .footer__bottom,
+  .sidebar__content {
+    font-size: 3.5rem;
+    flex-direction: column;
+  }
+
+  .pageSwitch {
+    font-size: 3.5rem;
+    width: 100%;
+  }
+
+  .header__heading {
+    justify-content: space-around;
+  }
+
+  .header__search {
+    width: 40%;
+  }
+
+  .hamburger__label {
+    display: inline-block;
+    color: white;
+    font-size: 4rem;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__nav--listItem {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  /* TODO: Need to add javascript to make hamburger button work */
 }
