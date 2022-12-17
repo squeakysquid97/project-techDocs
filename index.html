@@ -3,9 +3,12 @@
 
 <head>
   <title>Technical Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
@@ -14,13 +17,11 @@
       <p class="header__heading--lastWord">The
         web framework for perfectionists
         with deadlines.</p>
-
-      <label class="hamburger__label" for="hamburger">&#9776;</label>
-      <input type="checkbox" class="hamburger">
-
     </h1>
-
-    <div class="nav__container">
+    <nav id="nav__container">
+      <!--hamnav-->
+      <!-- <label class="hamburger__label" for="hamburger">&#9776;</label>
+      <input type="checkbox" class="hamburger"> -->
       <div class="header__nav">
         <a class="header__nav--listItem" href="#">OVERVIEW</a>
         <a class="header__nav--listItem" href="#">DOWNLOAD</a>
@@ -32,7 +33,7 @@
         <a class="header__nav--listItem" href="#">ABOUT</a>
         <a class="header__nav--listItem" href="#">♥ DONATE</a>
       </div>
-    </div>
+    </nav>
   </header>
   <div class="search__container">
     <h3 class="header__document">Documentation</h3> <input class="header__search" type="text" title="search bar"

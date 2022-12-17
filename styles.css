@@ -40,7 +40,8 @@ body {
 }
 .header__heading--lastWord {
   color: #43b58a;
-  margin: 1.8rem;
+  padding: 0.5rem 2rem 2rem 2rem;
+  margin: 0 0 0 1rem;
 }
 .hamburger {
   display: none;
@@ -52,6 +53,7 @@ body {
 .nav__container {
   margin: 1rem 0;
   width: 100%;
+  background: #000;
 }
 
 .header__nav {
@@ -229,10 +231,9 @@ section pre {
     width: 40%;
   }
 
-  .hamburger__label {
-    display: inline-block;
-    color: white;
-    font-size: 4rem;
+  .hamburger__label,
+  .hamburger {
+    display: none;
   }
 
   .header__nav {
@@ -244,5 +245,15 @@ section pre {
     font-size: 3rem;
     padding: 1rem;
   }
-  /* TODO: Need to add javascript to make hamburger button work */
+
+  @media screen and (max-width: 768px) {
+    .hamburger label {
+      display: inline-block;
+      color: white;
+      background: #a02620;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  }
 }
